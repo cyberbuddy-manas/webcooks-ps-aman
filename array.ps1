@@ -1,6 +1,11 @@
 Clear-Host
 
-$arr = 22, 56, 789, 54, 972, 34
+$hello = Read-Host -Prompt "How many numbers"
+
+for ($i = 0; $i -lt $hello; $i++) {
+    $arr += @(Read-Host -prompt "Enter a number")
+}
+
 $store = 0
 
 for ($amnt = 0; $amnt -lt $arr.Count; $amnt+=1) {
