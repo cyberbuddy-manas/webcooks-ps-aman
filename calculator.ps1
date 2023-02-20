@@ -7,28 +7,28 @@ Write-Host "4. Division"
 
 function addition {
     param (
-        $a, $b
+        [int]$a, [int]$b
     )
     return $a + $b    
 }
 
 function subtraction {
     param (
-        $a, $b
+        [int]$a, [int]$b
     )
-    return $a - $b    
+    return $a - $b
 }
 
 function multiplication {
     param (
-        $a, $b
+        [int]$a, [int]$b
     )
-    return $a * $b    
+    return $a * $b
 }
 
 function division {
     param (
-        $a, $b
+        [int]$a, [int]$b
     )
     return $a / $b    
 }
@@ -36,10 +36,10 @@ function division {
 [int]$num1 = Read-Host -Prompt "Select an Option"
 
 switch ($num1) {
-    1 { Write-Host addition -a Read-Host -prompt "Enter a number" -b Read-Host -prompt "Enter a number" }
-    2 { Write-Host subtraction -a Read-Host -prompt "Enter a number" -b Read-Host -prompt "Enter a number" }
-    3 { Write-Host multiplication -a Read-Host -prompt "Enter a number" -b Read-Host -prompt "Enter a number" }
-    4 { Write-Host division -a Read-Host -prompt "Enter a number" -b Read-Host -prompt "Enter a number" }
+    1 { Write-Host (addition -a (Read-Host -prompt "Enter a number") -b (Read-Host -prompt "Enter a number")) }
+    2 { Write-Host (subtraction -a (Read-Host -prompt "Enter a number") -b (Read-Host -prompt "Enter a number")) }
+    3 { Write-Host (multiplication -a (Read-Host -prompt "Enter a number") -b (Read-Host -prompt "Enter a number")) }
+    4 { Write-Host (division -a (Read-Host -prompt "Enter a number") -b (Read-Host -prompt "Enter a number")) }
     Default {
         Write-Host "Incorrect Option"
     }
